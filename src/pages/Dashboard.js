@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar'; // importa tu componente
+import Sidebar from './Sidebar'; 
 import Administradores from './Administradores';
 import Barberos from './Barberos';
 import Reservas from './Reservas';
 import Servicios from './Servicios';
 import AnalisisVentas from './AnalisisVentas';
 
-// ...otros imports
 
 function Dashboard() {
   const navigate = useNavigate();

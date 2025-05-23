@@ -15,7 +15,6 @@ function AnalisisVentas() {
   const [serviciosMasVendidos, setServiciosMasVendidos] = useState([]);
   const [totalVentasDia, setTotalVentasDia] = useState(0);
 
-  // Referencia para el área que quieres exportar
   const pdfRef = useRef();
 
   useEffect(() => {
@@ -26,7 +25,6 @@ function AnalisisVentas() {
     if (barberos.length > 0) {
       cargarVentas();
     }
-    // eslint-disable-next-line
   }, [fecha, barberos]);
 
   useEffect(() => {
@@ -59,7 +57,6 @@ function AnalisisVentas() {
     }
   };
 
-  // Datos para gráfica de barras (ventas por barbero)
   const barData = {
     labels: barberos.map(b => b.nombre),
     datasets: [
@@ -74,7 +71,6 @@ function AnalisisVentas() {
     ]
   };
 
-  // Datos para gráfica de pastel (servicios más vendidos)
   const pieData = {
     labels: serviciosMasVendidos.map(s => s.nombreServicio),
     datasets: [
@@ -89,16 +85,14 @@ function AnalisisVentas() {
     ]
   };
 
-  // Barbero top
   const barberoTop = barberos.reduce((max, b) =>
     (ventas[b.idBarbero] || 0) > (ventas[max?.idBarbero] || 0) ? b : max, null);
 
-  // Servicio top
+
   const servicioTop = serviciosMasVendidos.length > 0
     ? serviciosMasVendidos.reduce((max, s) => s.cantidad > max.cantidad ? s : max, serviciosMasVendidos[0])
     : null;
 
-  // Función para descargar el PDF
   const handleDownloadPDF = async () => {
     const input = pdfRef.current;
     const canvas = await html2canvas(input, { scale: 2 });

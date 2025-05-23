@@ -25,10 +25,10 @@ function Login() {
     }
   };
 
-  // Define un paddingRight igual para ambos inputs (por ejemplo, 38px)
+
   const inputStyle = {
     width: '100%',
-    padding: '10px 38px 10px 12px', // paddingRight igual en ambos
+    padding: '10px 38px 10px 12px',
     borderRadius: 7,
     border: '1px solid #b0b0b0',
     fontSize: 16,
