@@ -24,3 +24,4 @@ export const eliminarBarbero = async (id) => {
   // Si necesitas idAdministrador, pásalo como query param
   await axios.delete(`/barberos/${id}?idAdministrador=1`); // Cambia el id por el real
 };
+
