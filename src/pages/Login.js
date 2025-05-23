@@ -86,7 +86,7 @@ function Login() {
       >
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
           <img src={require('../images/logo_barberia.png')} alt="Logo barbería"
-            style={{ width: 56, height: 56, borderRadius: 12, objectFit: 'contain' }} />
+            style={{ width: 200, height: 200, borderRadius: 2, objectFit: 'contain' }} />
         </div>
         <h2 style={{
           textAlign: 'center',
