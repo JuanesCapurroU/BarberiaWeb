@@ -37,7 +37,6 @@ function Reservas() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      // Debes armar el objeto reserva con las relaciones correctas
       const reserva = {
         servicio: { idServicio: form.servicio },
         barbero: { idBarbero: form.barbero },
@@ -67,7 +66,6 @@ function Reservas() {
     cargarReservas();
   };
 
-  // Puedes agregar handleEditar y handleActualizarEstado si lo deseas
 
   return (
     <div style={{ maxWidth: 1100, margin: 'auto' }}>

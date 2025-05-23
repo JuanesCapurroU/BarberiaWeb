@@ -12,13 +12,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Redirige la ruta raíz a /login */}
         <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Ruta de login */}
         <Route path="/login" element={<Login />} />
 
-        {/* Rutas protegidas */}
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/barberos" element={<Barberos />} />
